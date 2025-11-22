@@ -183,9 +183,10 @@ int main(){
 		if(snake[0].x <= 0 || snake[0].x >= ROWS - 1 || snake[0].y <= 0 || snake[0].y >= COLS - 1){
 			printf("\033[?1049l");
 			printf("\n\n\n"); 
-			printf("BOOHOO!! GAME OVER");
+			printf("BOOHOO!! GAME OVER\n");
 			printf("your score:%d",score);
 			fflush(stdout); 
+			usleep(2000000);
 			old_terminal_settings();
 			return 0;
 		} 
@@ -194,9 +195,10 @@ int main(){
 			if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
 				printf("\033[?1049l");
 				printf("\n\n\n"); 
-				printf("COLLIDED WITH SELF LOL!!");
+				printf("COLLIDED WITH SELF LOL!!\n");
 				printf("your score:%d",score);
 				fflush(stdout); 
+				usleep(2000000);
 				old_terminal_settings();
 				return 0;
 			}
